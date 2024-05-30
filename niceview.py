@@ -79,7 +79,7 @@ def beautify_csv(inp, out, column_spacing, decimal_places, sort_column):
         rows.append(''.join(row_data))
 
     with open(out, 'w', newline='') as tsv_file:
-            tsv_file.write('\n'.join(rows))
+        tsv_file.write('\n'.join(rows))
 
 
 if __name__ == "__main__":
@@ -94,8 +94,8 @@ if __name__ == "__main__":
     if not os.path.exists(args.input):
         print("Error: Input file '{}' not found.".format(args.input))
         exit(1)
-
-    output_file = "niceview_"+args.input.split(".")[0]
+    
+    output_file = args.input.split(".")[0] + ".ncvw"
     beautify_csv(args.input, output_file,  args.column_spacing, args.decimal_places, args.sort_column)
 
 
