@@ -87,7 +87,7 @@ if __name__ == "__main__":
     parser.add_argument("input", help="Input file")
     parser.add_argument("-s", "--column-spacing", type=int, default=10, help="Spacing between columns (default: 10)")
     parser.add_argument("-d", "--decimal-places", type=int, default=2, help="Number of decimal places to round to (default: 2)")
-    parser.add_argument("-c", "--sort-column", type=int, default=0, help="Sort rows based on the specified column index (starting from 1)")
+    parser.add_argument("-c", "--sort-column", type=int, default=1, help="Sort rows based on the specified column index (starting from 1)")
     args = parser.parse_args()
 
     # Check if input file exists
